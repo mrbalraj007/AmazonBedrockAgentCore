@@ -1,0 +1,54 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "CloudWatchLogReadStatement",
+			"Effect": "Allow",
+			"Action": [
+				"logs:DescribeLogGroups",
+				"logs:GetQueryResults",
+				"logs:StartQuery"
+			],
+			"Resource": [
+				"*"
+			]
+		},
+		{
+			"Sid": "CloudWatchLogWriteStatement",
+			"Effect": "Allow",
+			"Action": [
+				"logs:CreateLogGroup",
+				"logs:CreateLogStream",
+				"logs:PutLogEvents"
+			],
+			"Resource": [
+				"arn:aws:logs:us-east-1:<<ACCOUNT ID>>:log-group:/aws/bedrock-agentcore/evaluations/*"
+			]
+		},
+		{
+			"Sid": "CloudWatchIndexPolicyStatement",
+			"Effect": "Allow",
+			"Action": [
+				"logs:DescribeIndexPolicies",
+				"logs:PutIndexPolicy"
+			],
+			"Resource": [
+				"arn:aws:logs:us-east-1:<<ACCOUNT ID>>:log-group:aws/spans",
+				"arn:aws:logs:us-east-1:<<ACCOUNT ID>>:log-group:aws/spans:*"
+			]
+		},
+		{
+			"Sid": "BedrockInvokeStatement",
+			"Effect": "Allow",
+			"Action": [
+				"bedrock:InvokeModel",
+				"bedrock:InvokeModelWithResponseStream"
+			],
+			"Resource": [
+				"arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-4-5-20250929-v1:0",
+				"arn:aws:bedrock:*::foundation-model/us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+				"arn:aws:bedrock:*:<<ACCOUNT ID>>:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0"
+			]
+		}
+	]
+}
