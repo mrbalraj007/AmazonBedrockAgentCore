@@ -1,0 +1,75 @@
+ {
+    "input": {
+      "text": "Is tomorrow a good day to go sea surfing in Santa Monica?"
+    }
+  }
+
+{
+    "input": {
+      "text": "Get weather for Mumbai and then Send I love you message to #social"
+    }
+  }
+
+
+Other prompts to test multitool calling and orchestration:
+
+{
+    "input": {
+      "text": "Send \"Execution beats intention.\" to #social channel on Slack"
+    }
+  }
+
+
+{
+    "input": {
+      "text": "Get the coordinates for Berlin and send them to #social"
+    }
+  }
+
+  {
+    "input": {
+      "text": "What is the current weather in Tokyo?"
+    }
+  }
+
+  {
+    "input": {
+      "text": "Get the coordinates for Madrid, then get the weather for those coordinates, then send a short summary to #social"
+    }
+  }
+
+    {
+    "input": {
+      "text": "Tell me a motivational quote and send it to #social"
+    }
+  }
+
+{
+    "input": {
+      "text": "Tell me the weather in Paris and Mumbai"
+    }
+  }
+
+{
+    "input": {
+      "text": "What is the Capital of Argentina and how is its weather?"
+    }
+  }
+
+  {
+    "input": {
+      "text": "Get the weather in Chicago and tell me the most popular travel destination in the world"
+    }
+  }
+
+
+Send \"Execution beats intention.\" to #social channel on Slack
+Get the coordinates for Berlin and send them to #social
+What is the current weather in Tokyo? Send it to #mylab.
+Get the coordinates for Madrid, then get the weather for those coordinates, then send a short summary to #social
+Find coordinates for Toronto and also send them to #social and #mylab
+Tell me a motivational quote and send it to #social
+Get coordinates for a city that does not exist and send result to #social
+Get the weather in Chicago and share it
+
+Note : Ensure that you have #social and #mylab channels on slack if not change the channel name.

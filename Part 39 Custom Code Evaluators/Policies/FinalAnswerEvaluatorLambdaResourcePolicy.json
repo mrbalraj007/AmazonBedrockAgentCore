@@ -1,0 +1,24 @@
+{
+  "Version": "2012-10-17",
+  "Id": "default",
+  "Statement": [
+    {
+      "Sid": "mypermission",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "bedrock.amazonaws.com"
+      },
+      "Action": "lambda:InvokeFunction",
+      "Resource": "<<ARN of FinalAnswerEvaluatorLambda>>"
+    },
+    {
+      "Sid": "mypolicy1",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "bedrock-agentcore.amazonaws.com"
+      },
+      "Action": "lambda:InvokeFunction",
+      "Resource": "<<ARN of FinalAnswerEvaluatorLambda>>"
+    }
+  ]
+}
